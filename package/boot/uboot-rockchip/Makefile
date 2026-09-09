@@ -396,6 +396,13 @@ define U-Boot/xiguapi-v3-rk3568
     nlnet_xiguapi-v3
 endef
 
+define U-Boot/bd-one-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=bd-one
+  BUILD_DEVICES:= \
+    bdkj_bd-one
+endef
+
 # RK3576 boards
 
 define U-Boot/rk3576/Default

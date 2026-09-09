@@ -67,6 +67,16 @@ define Device/IfnameMigration
   DEVICE_COMPAT_MESSAGE := Network interface names have been changed
 endef
 
+define Device/bdkj_bd-one
+  $(Device/rk3568)
+  DEVICE_VENDOR := bdkj
+  DEVICE_MODEL := bd-one
+  DEVICE_DTS := rk3568-bd-one
+  UBOOT_DEVICE_NAME := bd-one-rk3568
+  DEVICE_PACKAGES := block-mount kmod-ata-ahci kmod-hwmon-pwmfan kmod-nvme
+endef
+TARGET_DEVICES += bdkj_bd-one
+
 define Device/9tripod_x3568-v4
   $(Device/rk3568)
   DEVICE_VENDOR := 9Tripod
